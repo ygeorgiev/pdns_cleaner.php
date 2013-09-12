@@ -1,8 +1,6 @@
 pdns_cleaner.php
 ================
-
 Remove old domains from powerdns with mysql backend
------
 
 Dependencies:
 -----
@@ -13,6 +11,9 @@ Config:
 ------
 See first lines from script
 
+Usage:
+-----
+/usr/bin/php /path/to/pdns_cleaner.php
 
 WARNING:
 ------
