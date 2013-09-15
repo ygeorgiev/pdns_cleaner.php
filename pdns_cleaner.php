@@ -50,7 +50,7 @@ function dns_match($my_dns,$domain)
   /* get DNS servers */
   $command = 'dig +short -tns '.$domain;
   exec($command,$dig);
-
+  if ( count($dig)== 0 ) return FALSE; /* don't have DNS or doesn't work; My DNS works file ;) */
   /* match hack !? */
   $dig_uper = array_change_key_case($dig);
   $all_dns = array_unique(array_merge($my_dns,$dig_uper));
